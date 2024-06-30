@@ -1,0 +1,101 @@
+.header {
+  background-color: #2ab1e2;
+  color: #fff;
+  padding: 3px 15px;
+  position: fixed;
+  top: 0;
+  width: 99%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.current-time {
+  font-size: 18px;
+}
+
+.background-image {
+  background-image: url('https://cdn.wallpapersafari.com/47/59/MxXALE.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: px; /* Add padding to prevent content from being hidden behind the navbar */
+}
+
+.timer-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#timer {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: scaleUp 1s ease-in-out infinite alternate;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls input[type="number"] {
+  width: 80px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+  }
+
+  .controls input[type="number"] {
+    margin: 0 10px;
+  }
+
+  .controls button:first-child {
+    margin-right: 10px;
+  }
+}
